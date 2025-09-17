@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bloom Co. — GTAW Enabled Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><span>Bloom Co.</span></a>
+      <nav class="nav">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn btn-ghost" id="loginLink" href="#">Sign in</a>
+        <button class="btn btn-ghost" id="logoutBtn" hidden>Log out</button>
+        <button class="cart-button" id="openCartBtn" aria-label="Open cart">
+          <span class="cart-count" id="cartCount">0</span> 🧺
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Send joy with flowers</h1>
+          <p>Placeholders ready for GTA World checkout. Connect your UCP account to pay with your bank balance.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Shop bouquets</a>
+            <a class="btn btn-ghost" href="#about">Learn more</a>
+          </div>
+          <ul class="trust-badges">
+            <li>GTA World OAuth login</li>
+            <li>Secure server proxy</li>
+            <li>Static site on GitHub Pages</li>
+          </ul>
+        </div>
+        <div class="hero-art">
+          <img src="https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=1200&auto=format&fit=crop" alt="Placeholder bouquet" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Products grid -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bouquets</h2>
+          <div class="filters">
+            <button class="chip is-active" data-filter="all">All</button>
+            <button class="chip" data-filter="pastel">Pastel</button>
+            <button class="chip" data-filter="romance">Romance</button>
+            <button class="chip" data-filter="bold">Bold</button>
+          </div>
+        </div>
+
+        <div class="grid products" id="productGrid">
+          <!-- Card 1 -->
+          <article class="card" data-tags="pastel">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop" alt="Oopsie Daisy Classic" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Oopsie Daisy Classic</h3>
+              <p class="card-desc">Daisies, baby's breath, pink roses. Wrapped in pastel pink.</p>
+              <div class="card-foot">
+                <span class="price" data-price="49.00">$49.00</span>
+                <button class="btn btn-small btn-primary add-to-cart"
+                  data-id="p1" data-name="Oopsie Daisy Classic" data-price="49"
+                  data-img="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-tags="romance">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" alt="Forgive Me Not" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Forgive Me Not</h3>
+              <p class="card-desc">Soft blues and lilies with lavender ribbon.</p>
+              <div class="card-foot">
+                <span class="price" data-price="69.00">$69.00</span>
+                <button class="btn btn-small btn-primary add-to-cart"
+                  data-id="p2" data-name="Forgive Me Not" data-price="69"
+                  data-img="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-tags="bold">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop" alt="Gaslight Garland" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Gaslight Garland</h3>
+              <p class="card-desc">Deep reds with black ribbon accents.</p>
+              <div class="card-foot">
+                <span class="price" data-price="79.00">$79.00</span>
+                <button class="btn btn-small btn-primary add-to-cart"
+                  data-id="p3" data-name="Gaslight Garland" data-price="79"
+                  data-img="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">Add to cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container about">
+        <div class="about-copy">
+          <h2>About the shop</h2>
+        <p>Replace this text with your story, delivery areas, and services.</p>
+        <ul class="list">
+          <li>Custom events</li>
+          <li>Subscriptions</li>
+          <li>Workshops</li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <h2>Contact</h2>
+        <form id="contactForm" class="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your bouquet"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container fineprint">
+      <p>© <span id="year"></span> Bloom Co. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel">
+      <header class="cart-head">
+        <h3 id="cartTitle">Your cart</h3>
+        <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+      </header>
+      <div class="cart-items" id="cartItems"></div>
+      <footer class="cart-foot">
+        <div class="cart-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button class="btn btn-primary" id="checkoutBtn" disabled>Checkout with GTAW</button>
+      </footer>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
